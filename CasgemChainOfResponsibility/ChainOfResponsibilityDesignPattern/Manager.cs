@@ -8,7 +8,7 @@ namespace CasgemChainOfResponsibility.ChainOfResponsibilityDesignPattern
         public override void ProcessRequest(CustomerProcsessViewModel req)
         {
             Context context = new Context();
-            if (req.Amount <= 100000)
+            if (req.Amount <= 200000)
             {
                 CustomerProcess customerProcess = new CustomerProcess();
                 customerProcess.Amount = req.Amount;

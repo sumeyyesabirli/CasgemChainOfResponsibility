@@ -1,6 +1,16 @@
-﻿namespace CasgemChainOfResponsibility.ChainOfResponsibilityDesignPattern
+﻿using CasgemChainOfResponsibility.Models;
+
+namespace CasgemChainOfResponsibility.ChainOfResponsibilityDesignPattern
 {
-    public class Employee
+    public abstract class Employee
     {
+        protected Employee NextApprover;
+
+        public void SetNextApprover(Employee Supervisor) 
+        {
+            this.NextApprover = Supervisor;
+        }
+
+        public abstract void ProcessRequest(CustomerProcsessViewModel req);
     }
 }
